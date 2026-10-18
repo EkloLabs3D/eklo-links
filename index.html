@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eklo Labs | Impressão 3D</title>
+  <meta name="description" content="Soluções criativas e utilitários em Impressão 3D. Decor, Geek e Home Office. Enviamos para todo o Brasil.">
+  
+  <!-- Ícone da aba do navegador usando a própria logo circular -->
+  <link rel="icon" type="image/jpeg" href="EkloLabsCirculo.jpg">
+
+  <!-- Fontes do Google (Montserrat para a logo e Inter para os textos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@300;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-main: #161514;
+      --bg-card: #242220;
+      --bg-card-hover: #2e2b29;
+      --gold: #d49b35;
+      --gold-light: #e5b352;
+      --silver: #a8afb5;
+      --text-white: #ffffff;
+      --text-muted: #b5b3b0;
+      --ig-pink: #e1306c;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      background-image: radial-gradient(circle at 50% 0%, #2a251e 0%, var(--bg-main) 70%);
+      color: var(--text-white);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+    }
+
+    /* Logo Circular no Topo */
+    .avatar-wrapper {
+      width: 112px;
+      height: 112px;
+      margin: 0 auto 18px auto;
+      border-radius: 50%;
+      padding: 3px;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--silver) 100%);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      background-color: var(--bg-main);
+    }
+
+    /* Tipografia EKLO LABS */
+    .brand-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.75rem;
+      letter-spacing: 1.5px;
+      margin-bottom: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-eklo {
+      font-weight: 800;
+      color: var(--text-white);
+    }
+
+    .brand-labs {
+      font-weight: 300;
+      color: var(--gold);
+      letter-spacing: 3px;
+    }
+
+    .subtitle {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--silver);
+      margin-bottom: 18px;
+    }
+
+    /* Quadro de Descrição / Bio */
+    .bio-box {
+      background-color: rgba(36, 34, 32, 0.7);
+      border: 1px solid rgba(212, 155, 53, 0.25);
+      border-radius: 14px;
+      padding: 14px 16px;
+      margin-bottom: 28px;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      text-align: center;
+    }
+
+    /* Títulos de Seção e Botões */
+    .section-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--gold-light);
+      margin: 24px 0 12px 0;
+      font-weight: 600;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .btn {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: var(--bg-card);
+      color: var(--text-white);
+      text-decoration: none;
+      padding: 16px 20px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.98rem;
+      border: 1px solid #383532;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn:hover {
+      background-color: var(--bg-card-hover);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    /* Destaque para Lojas Oficiais */
+    .btn-store {
+      border: 1px solid rgba(212, 155, 53, 0.45);
+    }
+
+    /* Botão de Pós-venda / Suporte via Direct do Instagram */
+    .btn-support {
+      background: linear-gradient(135deg, rgba(212, 155, 53, 0.16) 0%, rgba(225, 48, 108, 0.16) 100%);
+      border: 1px solid rgba(225, 48, 108, 0.55);
+      color: #ff85a9;
+    }
+
+    .btn-support:hover {
+      background: linear-gradient(135deg, rgba(212, 155, 53, 0.26) 0%, rgba(225, 48, 108, 0.26) 100%);
+      border-color: var(--ig-pink);
+      color: #ffffff;
+    }
+
+    .support-note {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: -4px;
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+
+    footer {
+      margin-top: 42px;
+      font-size: 0.78rem;
+      color: #6c6863;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Certifique-se de que o arquivo EkloLabsCirculo.jpg está na mesma pasta -->
+    <div class="avatar-wrapper">
+      <img src="EkloLabsCirculo.jpg" alt="Eklo Labs Logo" class="avatar">
+    </div>
+
+    <h1 class="brand-title">
+      <span class="brand-eklo">EKLO</span>
+      <span class="brand-labs">LABS</span>
+    </h1>
+    <div class="subtitle">Impressão 3D</div>
+
+    <div class="bio-box">
+      🛠️ Soluções criativas e utilitários em 3D<br>
+      🎮 Decor, Geek e Home Office<br>
+      📦 Enviamos para todo o Brasil
+    </div>
+
+    <div class="links">
+      <div class="section-title">Compre em Nossas Lojas Oficiais</div>
+      
+      <!-- Mercado Livre (Link limpo e permanente da sua conta) -->
+      <a href="https://lista.mercadolivre.com.br/_CustId_1163635051" target="_blank" rel="noopener" class="btn btn-store">
+        🤝 Loja Oficial no Mercado Livre
+      </a>
+
+      <!-- Shopee (Troque pela URL da sua loja na Shopee) -->
+      <a href="https://shopee.com.br/" target="_blank" rel="noopener" class="btn btn-store">
+        🛍️ Loja Oficial na Shopee
+      </a>
+
+      <!-- TikTok Shop / Perfil TikTok -->
+      <a href="https://www.tiktok.com/@eklolabs" target="_blank" rel="noopener" class="btn btn-store">
+        🎵 TikTok & TikTok Shop
+      </a>
+
+      <div class="section-title">Acompanhe Nossas Criações</div>
+
+      <!-- Perfil do Instagram -->
+      <a href="https://www.instagram.com/eklo.labs/" target="_blank" rel="noopener" class="btn">
+        📸 Siga no Instagram (@eklo.labs)
+      </a>
+
+      <!-- Perfil do TikTok -->
+      <a href="https://www.tiktok.com/@eklolabs" target="_blank" rel="noopener" class="btn">
+        🎥 Bastidores e Novidades no TikTok
+      </a>
+
+      <div class="section-title">Pós-Venda e Atendimento</div>
+      <p class="support-note">Teve algum imprevisto com seu pedido ou quer uma ideia sob medida? Chame a gente na DM:</p>
+      
+      <!-- Link direto para abrir a conversa no Direct do Instagram -->
+      <a href="https://ig.me/m/eklo.labs" target="_blank" rel="noopener" class="btn btn-support">
+        💬 Falar com a gente no Direct (Instagram)
+      </a>
+    </div>
+
+    <footer>
+      © 2026 Eklo Labs • Todos os direitos reservados
+    </footer>
+  </div>
+
+</body>
+</html>
